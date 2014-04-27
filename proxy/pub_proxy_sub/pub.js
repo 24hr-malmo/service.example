@@ -8,7 +8,7 @@ sock.bindSync('tcp://*:6000');
 
 function sendData(){
     console.log("sending some data...");
-    sock.send('somechannel ' + ' this is a somechannel message');
+    sock.send('somechannel (' + new Date()  + ') this is a somechannel message');
     console.log("sent.");
 }
 
