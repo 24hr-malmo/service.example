@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    window.onload = function(){
+        var socket = io.connect('http://localhost');
+        socket.on('msg', function (data) {
+            console.log("data");
+            document.getElementsByTagName("body")[0].innerHTML += data + "<br/>";
+        });
+    }
+    </script>
+<body>
+</body>
+</html>
