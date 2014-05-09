@@ -1,3 +1,4 @@
+var helper = require('service.helper');
 var zmq = require('zmq');
 var zonar = require('zonar');
 
@@ -9,6 +10,8 @@ var broadcaster = zonar.create({
     name: 'example_publisher',
     payload: { 'sampledata': {type : 'pub', port : pubPort}, 'doc': {type : "rep", port : 6667 }}
 });
+
+helper.handleInterrupt(broadcaster);
 
 broadcaster.start(function(){
     console.log("zonar broadcasting started.");
@@ -26,3 +29,4 @@ broadcaster.start(function(){
     }, 5000);
 
 });
+

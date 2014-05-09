@@ -10,6 +10,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "zonar": "~0.5.6",
-    "zmq": "~2.7.0"
+    "zmq": "~2.7.0",
+    "service.helper": "git+https://github.com/24hr-malmo/service.helper.git"
   }
 }

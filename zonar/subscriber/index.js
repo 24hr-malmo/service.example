@@ -2,6 +2,9 @@ var helper = require('service.helper');
 var zonar = require('zonar');
 
 var z = zonar.create({ net : '24hr', name: 'example_subscriber'});
+
+helper.handleInterrupt(z);
+
 z.start(function(){
 
     console.log("Connecting to service/Waiting for service to go online...")
