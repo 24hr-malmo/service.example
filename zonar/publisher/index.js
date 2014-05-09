@@ -7,7 +7,7 @@ var pubPort = 6666;
 var broadcaster = zonar.create({
     net: '24hr',
     name: 'example_publisher',
-    payload: { 'sampledata': {type : 'sub', port : pubPort}, 'doc': {type : "req", port : 6667 }}
+    payload: { 'sampledata': {type : 'pub', port : pubPort}, 'doc': {type : "rep", port : 6667 }}
 });
 
 broadcaster.start(function(){
